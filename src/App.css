@@ -1,0 +1,245 @@
+/* Contentor Principal com Fundo Verde e Formas Curvas */
+.login-container {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  position: relative;
+  background: linear-gradient(135deg, #024a2b 0%, #066d40 50%, #0b8e53 100%);
+  overflow: hidden;
+}
+
+/* Vetores/Curvas sobrepostas no background */
+.bg-shape-1 {
+  position: absolute;
+  top: -15%;
+  right: -10%;
+  width: 600px;
+  height: 600px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+  transform: rotate(45deg);
+  pointer-events: none;
+}
+
+.bg-shape-2 {
+  position: absolute;
+  bottom: -20%;
+  left: -10%;
+  width: 700px;
+  height: 700px;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 60% 40% 30% 70% / 50% 30% 70% 50%;
+  pointer-events: none;
+}
+
+/* Cabeçalho Institucional */
+.header-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 24px;
+  z-index: 1;
+}
+
+/* Container de controle rígido do tamanho da logo */
+.logo-wrapper {
+  width: 100%;
+  max-width: 65px; /* Altere este valor se desejar ainda menor (ex: 180px) ou maior */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.brand-logo-img {
+  width: 100% !important;
+  height: auto !important;
+  max-height: 180px !important;
+  object-fit: contain !important;
+  filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+.welcome-title {
+  color: #ffffff;
+  font-size: 1.85rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.welcome-subtitle {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.95rem;
+  font-weight: 400;
+}
+
+/* Cartão / Painel do Formulário */
+.login-card {
+  width: 100%;
+  max-width: 420px;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 36px 32px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  transition: transform 0.3s ease;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Agrupamento de Input e Ícones */
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-icon-left {
+  position: absolute;
+  left: 14px;
+  color: #0d6e3e;
+  pointer-events: none;
+}
+
+.input-icon-right {
+  position: absolute;
+  right: 14px;
+  background: none;
+  border: none;
+  color: #0d6e3e;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+}
+
+.input-field {
+  width: 100%;
+  padding: 14px 44px 14px 44px;
+  background-color: #f0f7f3;
+  border: 1.5px solid #b8e0c8;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  color: #1a3828;
+  outline: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.input-field::placeholder {
+  color: #729c84;
+}
+
+.input-field:focus {
+  background-color: #ffffff;
+  border-color: #0d6e3e;
+  box-shadow: 0 0 0 3px rgba(13, 110, 62, 0.15);
+}
+
+.input-field.input-error {
+  border-color: #e53e3e;
+  background-color: #fff5f5;
+}
+
+.error-message {
+  color: #e53e3e;
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin-left: 2px;
+}
+
+/* Botão Entrar */
+.btn-submit {
+  width: 100%;
+  padding: 14px;
+  background-color: #0d6e3e;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  margin-top: 6px;
+}
+
+.btn-submit:hover {
+  background-color: #09522e;
+}
+
+.btn-submit:active {
+  transform: scale(0.99);
+}
+
+/* Link Esqueci a Senha e Mensagens */
+.forgot-password-container {
+  text-align: center;
+  margin-top: 4px;
+}
+
+.forgot-password-link {
+  color: #0d6e3e;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-decoration: underline;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.forgot-password-link:hover {
+  color: #05361e;
+}
+
+.info-alert {
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+.info-alert.success {
+  background-color: #e6fffa;
+  color: #234e52;
+  border: 1px solid #b2f5ea;
+}
+
+.info-alert.notice {
+  background-color: #feebc8;
+  color: #744210;
+  border: 1px solid #fbd38d;
+}
+
+/* Responsividade para Celulares e Tablets */
+@media (max-width: 480px) {
+  .login-card {
+    padding: 28px 20px;
+  }
+
+  .logo-wrapper {
+    max-width: 170px;
+  }
+
+  .welcome-title {
+    font-size: 1.5rem;
+  }
+
+  .welcome-subtitle {
+    font-size: 0.875rem;
+  }
+}
